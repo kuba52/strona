@@ -2,13 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://example.org/</loc>
+  </url><url>
+    <loc>http://example.org/assemblylanguage/</loc>
+  </url><url>
+    <loc>http://example.org/c#/</loc>
+  </url><url>
+    <loc>http://example.org/c&#43;&#43;/</loc>
+  </url><url>
+    <loc>http://example.org/c/</loc>
+  </url><url>
+    <loc>http://example.org/cobol/</loc>
+  </url><url>
+    <loc>http://example.org/delphiobjectpascal/</loc>
+  </url><url>
+    <loc>http://example.org/fortran/</loc>
+  </url><url>
+    <loc>http://example.org/go/</loc>
+  </url><url>
+    <loc>http://example.org/java/</loc>
+  </url><url>
+    <loc>http://example.org/javascript/</loc>
+  </url><url>
+    <loc>http://example.org/kotlin/</loc>
+  </url><url>
     <loc>http://example.org/language_list/</loc>
   </url><url>
-    <loc>http://example.org/main/</loc>
+    <loc>http://example.org/matlab/</loc>
+  </url><url>
+    <loc>http://example.org/php/</loc>
+  </url><url>
+    <loc>http://example.org/python/</loc>
+  </url><url>
+    <loc>http://example.org/ruby/</loc>
+  </url><url>
+    <loc>http://example.org/rust/</loc>
+  </url><url>
+    <loc>http://example.org/scratch/</loc>
+  </url><url>
+    <loc>http://example.org/sql/</loc>
+  </url><url>
+    <loc>http://example.org/swift/</loc>
+  </url><url>
+    <loc>http://example.org/visualbasic/</loc>
   </url><url>
     <loc>http://example.org/categories/</loc>
-  </url><url>
-    <loc>http://example.org/</loc>
   </url><url>
     <loc>http://example.org/tags/</loc>
   </url>

@@ -6,6 +6,7 @@ from mdutils.tools.Image import Image
 from googlesearch import search
 import re
 from mdutils.mdutils import MdUtils
+import os
 
 
 
@@ -47,14 +48,15 @@ def cut_string_after_phrase(input_string, phrase):
 
 
 base_page = 'https://www.tiobe.com'
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
-
+'''
 file = open("strona.txt", "r")
 language_html = '\n'.join(file.readlines())
 '''
 r = requests.get(base_page + '/tiobe-index/')
 language_html = r.content
-'''
+
 
 soup = BeautifulSoup(language_html, 'html.parser')
 
@@ -69,11 +71,11 @@ general_description = cut_string_after_phrase(general_description, "index can be
 
 
 
-md = MdUtils(file_name='/content/_index', title='TIOBE Index for February 2024')
+md = MdUtils(file_name = script_dir + '/content/_index', title='TIOBE Index for February 2024')
 
 md.write(general_description)
 md.write(f"[here.]({link})")
-md.new_line("[See the list of the top 20 programming languages in February 2024](/language_list)")
+md.new_line("[See the list of the top 20 programming languages in February 2024](/strona/language_list)")
 md.create_md_file()
 
 
@@ -91,6 +93,7 @@ for j in jezyki:
     src = base_page + t[3].find("img")['src']
     zdj = f'![Image]({src})'
     filename = '/' + name.replace(" ", "").replace('/', '').lower()
+    filelink = '/strona' + filename
 
     article_text = "loren ipsum"
     url = 'www.wikipedia.org'
@@ -103,19 +106,19 @@ for j in jezyki:
 
 
 
-    md = MdUtils(file_name='/content' + filename, title=name)
+    md = MdUtils(file_name= script_dir + '/content' + filename, title=name)
     md.new_line(f"![{name}]({src})")
     md.new_line(article_text)
     md.new_line(f"[Wikipedia]({url})")
     md.create_md_file()
 
     
-    lista_jezykow.append({"nr": nr, "image": src, "name": name, "share": share, "description": article_summary, "url": url, "link": filename})
+    lista_jezykow.append({"nr": nr, "image": src, "name": name, "share": share, "description": article_summary, "url": url, "link": filelink})
 
 
 
 
-md = MdUtils(file_name='/content/language_list', title='Top 20 programming languages in February 2024')
+md = MdUtils(file_name= script_dir + '/content/language_list', title='Top 20 programming languages in February 2024')
 
 for item_info in lista_jezykow:
     # Add item name as a heading
